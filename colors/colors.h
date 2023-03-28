@@ -27,6 +27,10 @@ enum colors {
 	yellow = 14,
 	white = 15,
 };
+// Presets MUST be bigger that 256
+enum presets {
+	error = 640,
+};
 namespace color {
 	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 
@@ -36,7 +40,11 @@ namespace color {
 			text.pop_back();
 			inv = true;
 		}
-		int color = background * 16 + font;
+		int color;
+		if (font > 256)
+			color = font;
+		else
+			color = background * 16 + font;
 		SetConsoleTextAttribute(hConsole, color);
 		printf(text.c_str());
 		SetConsoleTextAttribute(hConsole, 7);

@@ -24,7 +24,6 @@
     <ProjectGuid>{31e599f4-f5e1-4c3d-b81a-32b1df869348}</ProjectGuid>
     <RootNamespace>structuresClassesEnums</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>colors</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
